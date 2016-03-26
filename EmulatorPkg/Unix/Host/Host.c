@@ -109,7 +109,6 @@ main (
   UINTN                 Index2;
   UINTN                 PeiIndex;
   CHAR8                 *FileName;
-  BOOLEAN               Done;
   EFI_PEI_FILE_HANDLE   FileHandle;
   VOID                  *SecFile;
   CHAR16                *MemorySizeStr;
@@ -229,7 +228,7 @@ main (
   }
 
   Index2 = 0;
-  for (Done = FALSE, Index = 0, PeiIndex = 0, SecFile = NULL;
+  for (Index = 0, PeiIndex = 0, SecFile = NULL;
        FirmwareVolumesStr[Index2] != 0;
        Index++) {
     for (Index1 = 0; (FirmwareVolumesStr[Index2] != '!') && (FirmwareVolumesStr[Index2] != 0); Index2++) {
